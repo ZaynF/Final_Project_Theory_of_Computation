@@ -69,7 +69,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 3. 輸入"chi"會到中文歌；輸入"eng"會到英文歌；輸入"jap"會到日文歌
 4. 隨後各對應介面會給其曲目單，輸入對應的編號便可收到音樂檔案、或是網址
 5. 給完之後，bot便會回到"user"state
-6. 指令懶人包:music -> chi/eng/jap -> 1~10
+6. 指令懶人包:music -> chi/eng/jap -> 1~7
 
 ## Author
 [ZaynF](https://github.com/ZaynF)
