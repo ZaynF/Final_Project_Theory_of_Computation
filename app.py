@@ -35,7 +35,18 @@ machine = TocMachine(
         'eng7',
         'eng8',
         'eng9',
-        'eng10'
+        'eng10',
+        'chi',
+        'chi1',
+        'chi2',
+        'chi3',
+        'chi4',
+        'chi5',
+        'chi6',
+        'chi7',
+        'chi8',
+        'chi9',
+        'chi10'
     ],
     transitions=[
         {
@@ -165,6 +176,72 @@ machine = TocMachine(
             'conditions': 'is_going_to_eng10'
         },
         {
+            'trigger': 'advance',
+            'source': 'music',
+            'dest': 'chi',
+            'conditions': 'is_going_to_chi'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi1',
+            'conditions': 'is_going_to_chi1'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi2',
+            'conditions': 'is_going_to_chi2'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi3',
+            'conditions': 'is_going_to_chi3'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi4',
+            'conditions': 'is_going_to_chi4'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi5',
+            'conditions': 'is_going_to_chi5'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi6',
+            'conditions': 'is_going_to_chi6'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi7',
+            'conditions': 'is_going_to_chi7'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi8',
+            'conditions': 'is_going_to_chi8'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi9',
+            'conditions': 'is_going_to_chi9'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'chi',
+            'dest': 'chi10',
+            'conditions': 'is_going_to_chi10'
+        },
+        {
             'trigger': 'go_back',
             'source': [
                 'state1',
@@ -181,7 +258,17 @@ machine = TocMachine(
                 'eng7',
                 'eng8',
                 'eng9',
-                'eng10'
+                'eng10',
+                'chi1',
+                'chi2',
+                'chi3',
+                'chi4',
+                'chi5',
+                'chi6',
+                'chi7',
+                'chi8',
+                'chi9',
+                'chi10'
             ],
             'dest': 'user'
         }
@@ -218,4 +305,5 @@ def show_fsm():
 
 if __name__ == "__main__":
     _set_webhook()
+    machine.get_graph().draw("state.png",prog="dot")
     app.run()
