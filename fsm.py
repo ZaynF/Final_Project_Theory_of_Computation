@@ -91,18 +91,6 @@ class TocMachine(GraphMachine):
         text = update.message.text
         return text.lower() == '7'
 
-    def is_going_to_eng8(self, update):
-        text = update.message.text
-        return text.lower() == '8'
-
-    def is_going_to_eng9(self, update):
-        text = update.message.text
-        return text.lower() == '9'
-
-    def is_going_to_eng10(self, update):
-        text = update.message.text
-        return text.lower() == '10'
-
     #chinese
     def is_going_to_chi(self, update):
         text = update.message.text
@@ -135,18 +123,6 @@ class TocMachine(GraphMachine):
     def is_going_to_chi7(self, update):
         text = update.message.text
         return text.lower() == '7'
-
-    def is_going_to_chi8(self, update):
-        text = update.message.text
-        return text.lower() == '8'
-
-    def is_going_to_chi9(self, update):
-        text = update.message.text
-        return text.lower() == '9'
-
-    def is_going_to_chi10(self, update):
-        text = update.message.text
-        return text.lower() == '10'
 
     #state1
 
@@ -239,117 +215,88 @@ class TocMachine(GraphMachine):
 
     #english
     def on_enter_eng(self, update):
-        update.message.reply_text("1.Against The Current - Something You Need\n2.Alex Goot, Kurt Schneider, and Chrissy Costanza - Beauty and Beat\n3.Don Omar-Danza Kuduro Lyrics\n4.From Ashes To New - Same Old Story\n5.Linkin Park - Leave Out All The Rest\n6.OneRepublic-Secrets\n7.Phillip Phillips - Gone, Gone, Gone\n8.Simple Plan - Jet Lag ft. Marie-Mai\n9.Simple Plan - Shut Up!\n10.The Cab - Angel With A Shotgun")
+        update.message.reply_text("1.Alex Goot, Kurt Schneider, and Chrissy Costanza - Beauty and Beat\n2.Don Omar-Danza Kuduro Lyrics\n3.Linkin Park - Leave Out All The Rest\n4.OneRepublic-Secrets\n5.Phillip Phillips - Gone, Gone, Gone\n6.Simple Plan - Jet Lag ft. Marie-Mai\n7.The Cab - Angel With A Shotgun")
 
     def on_exit_eng(self, update):
         print('Leaving eng')
 
-    #1.Against The Current - Something You Need
+
+    #1.Alex Goot, Kurt Schneider, and Chrissy Costanza - Beauty and Beat
     def on_enter_eng1(self, update):
-
-        update.message.reply_audio(open("music/Eng/Against The Current - Something You Need.mp3","rb"))
-
-        update.message.reply_text("Against The Current - Something You Need")
-        self.go_back(update)
-
-    def on_exit_eng1(self, update):
-        print('Leaving eng1')
-
-    #2.Alex Goot, Kurt Schneider, and Chrissy Costanza - Beauty and Beat
-    def on_enter_eng2(self, update):
 
         update.message.reply_audio(open("music/Eng/Alex Goot, Kurt Schneider, and Chrissy Costanza - Beauty and Beat.mp3","rb"))
         update.message.reply_text("Alex Goot, Kurt Schneider, and Chrissy Costanza - Beauty and Beat")
         self.go_back(update)
 
-    def on_exit_eng2(self, update):
-        print('Leaving eng2')
+    def on_exit_eng1(self, update):
+        print('Leaving eng1')
 
-    #3.Don Omar-Danza Kuduro Lyrics
-    def on_enter_eng3(self, update):
+    #2.Don Omar-Danza Kuduro Lyrics
+    def on_enter_eng2(self, update):
 
         update.message.reply_audio(open("music/Eng/Don Omar-Danza Kuduro.mp3","rb"))
         update.message.reply_text("Don Omar-Danza Kuduro")
         self.go_back(update)
 
-    def on_exit_eng3(self, update):
-        print('Leaving eng3')
+    def on_exit_eng2(self, update):
+        print('Leaving eng2')
 
-    #4.From Ashes To New - Same Old Story
-    def on_enter_eng4(self, update):
 
-        update.message.reply_audio(open("music/Eng/From Ashes To New - Same Old Story.mp3","rb"))
-        update.message.reply_text("From Ashes To New - Same Old Story")
-        self.go_back(update)
-
-    def on_exit_eng4(self, update):
-        print('Leaving eng4')
-
-    #5.Linkin Park - Leave Out All The Rest
-    def on_enter_eng5(self, update):
+    #3.Linkin Park - Leave Out All The Rest
+    def on_enter_eng3(self, update):
 
         update.message.reply_audio(open("music/Eng/Linkin Park - Leave Out All The Rest.mp3","rb"))
         update.message.reply_text("Linkin Park - Leave Out All The Rest")
         self.go_back(update)
 
-    def on_exit_eng5(self, update):
-        print('Leaving eng5')
+    def on_exit_eng3(self, update):
+        print('Leaving eng3')
 
-    #6.OneRepublic-Secrets
-    def on_enter_eng6(self, update):
+    #4.OneRepublic-Secrets
+    def on_enter_eng4(self, update):
 
         update.message.reply_audio(open("music/Eng/OneRepublic-Secrets.mp3","rb"))
         update.message.reply_text("OneRepublic-Secrets")
         self.go_back(update)
 
-    def on_exit_eng6(self, update):
-        print('Leaving eng6')
+    def on_exit_eng4(self, update):
+        print('Leaving eng4')
 
-    #7.Phillip Phillips - Gone, Gone, Gone
-    def on_enter_eng7(self, update):
+    #5.Phillip Phillips - Gone, Gone, Gone
+    def on_enter_eng5(self, update):
 
         update.message.reply_audio(open("music/Eng/Phillip Phillips - Gone, Gone, Gone.mp3","rb"))
         update.message.reply_text("Phillip Phillips - Gone, Gone, Gone")
         self.go_back(update)
 
-    def on_exit_eng7(self, update):
-        print('Leaving eng7')
+    def on_exit_eng5(self, update):
+        print('Leaving eng5')
 
-    #8.Simple Plan - Jet Lag ft. Marie-Mai
-    def on_enter_eng8(self, update):
+    #6.Simple Plan - Jet Lag ft. Marie-Mai
+    def on_enter_eng6(self, update):
 
         update.message.reply_audio(open("music/Eng/Simple Plan - Jet Lag ft. Marie-Mai.mp3","rb"))
         time.sleep(10)
         update.message.reply_text("Simple Plan - Jet Lag ft. Marie-Mai")
         self.go_back(update)
 
-    def on_exit_eng8(self, update):
-        print('Leaving eng8')
+    def on_exit_eng6(self, update):
+        print('Leaving eng6')
 
-    #9.Simple Plan - Shut Up!
-    def on_enter_eng9(self, update):
-
-        update.message.reply_audio(open("music/Eng/Simple Plan - Shut Up!.mp3","rb"))
-        update.message.reply_text("Simple Plan - Shut Up!")
-        self.go_back(update)
-
-    def on_exit_eng9(self, update):
-        print('Leaving eng9')
-
-    #10.The Cab - Angel With A Shotgun
-    def on_enter_eng10(self, update):
+    #7.The Cab - Angel With A Shotgun
+    def on_enter_eng7(self, update):
 
         socket.setdefaulttimeout(0.0)
         update.message.reply_audio(open("music/Eng/The Cab - Angel With A Shotgun.mp3","rb"))
         update.message.reply_text("The Cab - Angel With A Shotgun")
         self.go_back(update)
 
-    def on_exit_eng10(self, update):
-        print('Leaving eng10')
+    def on_exit_eng7(self, update):
+        print('Leaving eng7')
 
     #chinese
     def on_enter_chi(self, update):
-        update.message.reply_text("1.DANCE FLOW-戀愛小動作\n2.Eric周興哲 - 快樂一次擁有\n3.F.I.R.-我要飛\n4.io樂團 - Pati pati\n5.io樂團 - 回到17歲\n6.四個朋友 - 一千個太陽\n7.棒棒堂+黑澀會美眉 - 黑糖秀\n8.河仁傑 - 接不接受\n9.那我懂你意思了 - 很幼稚嗎\n10.黑澀會美眉 - Hello愛情風")
+        update.message.reply_text("1.DANCE FLOW-戀愛小動作\n2.F.I.R.-我要飛\n3.io樂團 - Pati pati\n4.io樂團 - 回到17歲\n5.棒棒堂+黑澀會美眉 - 黑糖秀\n6.河仁傑 - 接不接受\n7.黑澀會美眉 - Hello愛情風")
 
     def on_exit_chi(self, update):
         print('Leaving chi')
@@ -357,103 +304,71 @@ class TocMachine(GraphMachine):
     #1.DANCE FLOW-戀愛小動作
     def on_enter_chi1(self, update):
 
-        #update.message.reply_audio(open("music/Chi/DANCE FLOW-戀愛小動作.mp3","rb"))
-        update.message.reply_text("https://www.youtube.com/watch?v=u0xrRyJFlgA")
+        update.message.reply_audio(open("music/Chi/DANCE FLOW-戀愛小動作.mp3","rb"))
+        #update.message.reply_text("https://www.youtube.com/watch?v=u0xrRyJFlgA")
         update.message.reply_text("DANCE FLOW-戀愛小動作")
         self.go_back(update)
 
     def on_exit_chi1(self, update):
         print('Leaving chi1')
 
-    #2.Eric周興哲 - 快樂一次擁有
+    #2.F.I.R.-我要飛
     def on_enter_chi2(self, update):
-
-        #update.message.reply_audio(open("music/Chi/Eric周興哲 - 快樂一次擁有.mp3","rb"))
-        update.message.reply_text("https://www.youtube.com/watch?v=4k_LWRl_Ipc")
-        update.message.reply_text("Eric周興哲 - 快樂一次擁有")
-        self.go_back(update)
-
-    def on_exit_chi2(self, update):
-        print('Leaving chi2')
-
-    #3.F.I.R.-我要飛
-    def on_enter_chi3(self, update):
 
         update.message.reply_audio(open("music/Chi/F.I.R.-我要飛.mp3","rb"))
         update.message.reply_text("F.I.R.-我要飛")
         self.go_back(update)
 
-    def on_exit_chi3(self, update):
-        print('Leaving chi3')
+    def on_exit_chi2(self, update):
+        print('Leaving chi2')
 
-    #4.io樂團 - Pati pati
-    def on_enter_chi4(self, update):
+    #3.io樂團 - Pati pati
+    def on_enter_chi3(self, update):
 
         update.message.reply_audio(open("music/Chi/io樂團 - Pati pati.mp3","rb"))
         update.message.reply_text("io樂團 - Pati pati")
         self.go_back(update)
 
-    def on_exit_chi4(self, update):
-        print('Leaving chi4')
+    def on_exit_chi3(self, update):
+        print('Leaving chi3')
 
-    #5.io樂團 - 回到17歲
-    def on_enter_chi5(self, update):
+    #4.io樂團 - 回到17歲
+    def on_enter_chi4(self, update):
 
         update.message.reply_audio(open("music/Chi/io樂團 - 回到17歲.mp3","rb"))
         update.message.reply_text("io樂團 - 回到17歲")
         self.go_back(update)
 
-    def on_exit_chi5(self, update):
-        print('Leaving chi5')
+    def on_exit_chi4(self, update):
+        print('Leaving chi4')
 
-    #6.四個朋友 - 一千個太陽
-    def on_enter_chi6(self, update):
-
-        update.message.reply_audio(open("music/Chi/四個朋友 - 一千個太陽.mp3","rb"))
-        update.message.reply_text("四個朋友 - 一千個太陽")
-        self.go_back(update)
-
-    def on_exit_chi6(self, update):
-        print('Leaving chi6')
-
-    #7.棒棒堂+黑澀會美眉 - 黑糖秀
-    def on_enter_chi7(self, update):
+    #5.棒棒堂+黑澀會美眉 - 黑糖秀
+    def on_enter_chi5(self, update):
 
         update.message.reply_audio(open("music/Chi/棒棒堂+黑澀會美眉 - 黑糖秀.mp3","rb"))
         update.message.reply_text("棒棒堂+黑澀會美眉 - 黑糖秀")
         self.go_back(update)
 
-    def on_exit_chi7(self, update):
-        print('Leaving chi7')
+    def on_exit_chi5(self, update):
+        print('Leaving chi5')
 
-    #8.河仁傑 - 接不接受
-    def on_enter_chi8(self, update):
+    #6.河仁傑 - 接不接受
+    def on_enter_chi6(self, update):
 
         update.message.reply_document(open("music/Chi/河仁傑 - 接不接受.mp3","rb"))
-        time.sleep(10)
         update.message.reply_text("河仁傑 - 接不接受")
         self.go_back(update)
 
-    def on_exit_chi8(self, update):
-        print('Leaving chi8')
+    def on_exit_chi6(self, update):
+        print('Leaving chi6')
 
-    #9.那我懂你意思了 - 很幼稚嗎
-    def on_enter_chi9(self, update):
-
-        update.message.reply_audio(open("music/Chi/那我懂你意思了 - 很幼稚嗎.mp3","rb"))
-        update.message.reply_text("那我懂你意思了 - 很幼稚嗎")
-        self.go_back(update)
-
-    def on_exit_chi9(self, update):
-        print('Leaving chi9')
-
-    #10.黑澀會美眉 - Hello愛情風
-    def on_enter_chi10(self, update):
+    #7.黑澀會美眉 - Hello愛情風
+    def on_enter_chi7(self, update):
 
         #sendAudio(open("music/Chi/黑澀會美眉 - Hello愛情風.mp3","rb"))
         update.message.reply_audio(open("music/Chi/黑澀會美眉 - Hello愛情風.mp3","rb"))
         update.message.reply_text("黑澀會美眉 - Hello愛情風")
         self.go_back(update)
 
-    def on_exit_chi10(self, update):
-        print('Leaving chi10')
+    def on_exit_chi7(self, update):
+        print('Leaving chi7')

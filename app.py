@@ -33,9 +33,6 @@ machine = TocMachine(
         'eng5',
         'eng6',
         'eng7',
-        'eng8',
-        'eng9',
-        'eng10',
         'chi',
         'chi1',
         'chi2',
@@ -43,10 +40,7 @@ machine = TocMachine(
         'chi4',
         'chi5',
         'chi6',
-        'chi7',
-        'chi8',
-        'chi9',
-        'chi10'
+        'chi7'
     ],
     transitions=[
         {
@@ -159,24 +153,6 @@ machine = TocMachine(
         },
         {
             'trigger': 'advance',
-            'source': 'eng',
-            'dest': 'eng8',
-            'conditions': 'is_going_to_eng8'
-        },
-        {
-            'trigger': 'advance',
-            'source': 'eng',
-            'dest': 'eng9',
-            'conditions': 'is_going_to_eng9'
-        },
-        {
-            'trigger': 'advance',
-            'source': 'eng',
-            'dest': 'eng10',
-            'conditions': 'is_going_to_eng10'
-        },
-        {
-            'trigger': 'advance',
             'source': 'music',
             'dest': 'chi',
             'conditions': 'is_going_to_chi'
@@ -224,24 +200,6 @@ machine = TocMachine(
             'conditions': 'is_going_to_chi7'
         },
         {
-            'trigger': 'advance',
-            'source': 'chi',
-            'dest': 'chi8',
-            'conditions': 'is_going_to_chi8'
-        },
-        {
-            'trigger': 'advance',
-            'source': 'chi',
-            'dest': 'chi9',
-            'conditions': 'is_going_to_chi9'
-        },
-        {
-            'trigger': 'advance',
-            'source': 'chi',
-            'dest': 'chi10',
-            'conditions': 'is_going_to_chi10'
-        },
-        {
             'trigger': 'go_back',
             'source': [
                 'state1',
@@ -256,19 +214,13 @@ machine = TocMachine(
                 'eng5',
                 'eng6',
                 'eng7',
-                'eng8',
-                'eng9',
-                'eng10',
                 'chi1',
                 'chi2',
                 'chi3',
                 'chi4',
                 'chi5',
                 'chi6',
-                'chi7',
-                'chi8',
-                'chi9',
-                'chi10'
+                'chi7'
             ],
             'dest': 'user'
         }
