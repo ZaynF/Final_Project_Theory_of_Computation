@@ -40,7 +40,15 @@ machine = TocMachine(
         'chi4',
         'chi5',
         'chi6',
-        'chi7'
+        'chi7',
+        'jap',
+        'jap1',
+        'jap2',
+        'jap3',
+        'jap4',
+        'jap5',
+        'jap6',
+        'jap7'
     ],
     transitions=[
         {
@@ -200,6 +208,54 @@ machine = TocMachine(
             'conditions': 'is_going_to_chi7'
         },
         {
+            'trigger': 'advance',
+            'source': 'music',
+            'dest': 'jap',
+            'conditions': 'is_going_to_jap'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap1',
+            'conditions': 'is_going_to_jap1'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap2',
+            'conditions': 'is_going_to_jap2'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap3',
+            'conditions': 'is_going_to_jap3'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap4',
+            'conditions': 'is_going_to_jap4'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap5',
+            'conditions': 'is_going_to_jap5'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap6',
+            'conditions': 'is_going_to_jap6'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'jap',
+            'dest': 'jap7',
+            'conditions': 'is_going_to_jap7'
+        },
+        {
             'trigger': 'go_back',
             'source': [
                 'state1',
@@ -220,7 +276,14 @@ machine = TocMachine(
                 'chi4',
                 'chi5',
                 'chi6',
-                'chi7'
+                'chi7',
+                'jap1',
+                'jap2',
+                'jap3',
+                'jap4',
+                'jap5',
+                'jap6',
+                'jap7'
             ],
             'dest': 'user'
         }

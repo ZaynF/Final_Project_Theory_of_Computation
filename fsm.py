@@ -124,6 +124,39 @@ class TocMachine(GraphMachine):
         text = update.message.text
         return text.lower() == '7'
 
+    #japanese
+    def is_going_to_jap(self, update):
+        text = update.message.text
+        return text.lower() == 'jap'
+
+    def is_going_to_jap1(self, update):
+        text = update.message.text
+        return text.lower() == '1'
+
+    def is_going_to_jap2(self, update):
+        text = update.message.text
+        return text.lower() == '2'
+
+    def is_going_to_jap3(self, update):
+        text = update.message.text
+        return text.lower() == '3'
+
+    def is_going_to_jap4(self, update):
+        text = update.message.text
+        return text.lower() == '4'
+
+    def is_going_to_jap5(self, update):
+        text = update.message.text
+        return text.lower() == '5'
+
+    def is_going_to_jap6(self, update):
+        text = update.message.text
+        return text.lower() == '6'
+
+    def is_going_to_jap7(self, update):
+        text = update.message.text
+        return text.lower() == '7'
+
     #state1
 
     def on_enter_state1(self, update):
@@ -372,3 +405,83 @@ class TocMachine(GraphMachine):
 
     def on_exit_chi7(self, update):
         print('Leaving chi7')
+
+    #japanese
+    def on_enter_jap(self, update):
+        update.message.reply_text("1.Aimer with chelly (EGOIST) - ninelie\n2.Galileo Galilei - 恋の寿命\n3.LM.C  - BOYS_GIRLS\n4.Nobodyknows  - Heros Come Back!\n5.ONE OK ROCK - The Beginning\n6.Silent Siren - 戀雪\n7.西野加奈 - Style")
+
+    def on_exit_jap(self, update):
+        print('Leaving jap')
+
+
+    #1.Aimer with chelly (EGOIST) - ninelie
+    def on_enter_jap1(self, update):
+
+        update.message.reply_audio(open("music/Jap/Aimer with chelly (EGOIST) - ninelie.mp3","rb"))
+        update.message.reply_text("Aimer with chelly (EGOIST) - ninelie")
+        self.go_back(update)
+
+    def on_exit_jap1(self, update):
+        print('Leaving jap1')
+
+    #2.Galileo Galilei - 恋の寿命
+    def on_enter_jap2(self, update):
+
+        update.message.reply_audio(open("music/Jap/Galileo Galilei - 恋の寿命.mp3","rb"))
+        update.message.reply_text("Galileo Galilei - 恋の寿命")
+        self.go_back(update)
+
+    def on_exit_jap2(self, update):
+        print('Leaving jap2')
+
+
+    #3.LM.C  - BOYS_GIRLS
+    def on_enter_jap3(self, update):
+
+        update.message.reply_audio(open("music/Jap/LM.C  - BOYS_GIRLS.mp3","rb"))
+        update.message.reply_text("LM.C  - BOYS_GIRLS")
+        self.go_back(update)
+
+    def on_exit_jap3(self, update):
+        print('Leaving jap3')
+
+    #4.Nobodyknows  - Heros Come Back!
+    def on_enter_jap4(self, update):
+
+        update.message.reply_audio(open("music/Jap/Nobodyknows  - Heros Come Back!.mp3","rb"))
+        update.message.reply_text("Nobodyknows  - Heros Come Back!")
+        self.go_back(update)
+
+    def on_exit_jap4(self, update):
+        print('Leaving jap4')
+
+    #5.ONE OK ROCK - The Beginning
+    def on_enter_jap5(self, update):
+
+        update.message.reply_audio(open("music/Jap/ONE OK ROCK - The Beginning.mp3","rb"))
+        update.message.reply_text("ONE OK ROCK - The Beginning")
+        self.go_back(update)
+
+    def on_exit_jap5(self, update):
+        print('Leaving jap5')
+
+    #6.Silent Siren - 戀雪
+    def on_enter_jap6(self, update):
+
+        update.message.reply_audio(open("music/Jap/Silent Siren - 戀雪.mp3","rb"))
+        update.message.reply_text("Silent Siren - 戀雪")
+        self.go_back(update)
+
+    def on_exit_jap6(self, update):
+        print('Leaving jap6')
+
+    #7.西野加奈 - Style
+    def on_enter_jap7(self, update):
+
+        socket.setdefaulttimeout(0.0)
+        update.message.reply_audio(open("music/Jap/西野加奈 - Style.mp3","rb"))
+        update.message.reply_text("西野加奈 - Style")
+        self.go_back(update)
+
+    def on_exit_jap7(self, update):
+        print('Leaving jap7')
