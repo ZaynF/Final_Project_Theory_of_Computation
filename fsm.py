@@ -1,5 +1,4 @@
 from transitions.extensions import GraphMachine
-import vlc
 import time
 import socket
 import ssl
